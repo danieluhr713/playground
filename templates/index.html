@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .colors {
+            width: 250px;
+            height: 250px;
+            background-color: var(--color);
+            margin: 20px;
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <title>Playground</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <table>
+        <tr>
+            {% for i in range(times): %}
+            <td class="colors" style="--color: {{ color }}"></td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
